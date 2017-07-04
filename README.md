@@ -32,7 +32,7 @@ Each image of a target area must be generated within 480 ms after the echoes ret
 
 The mission control computer in the aircraft is a 4 processor SMP system. The defence system is taken from the Generic Avionics Platform (GAP)[[3]](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=160372), which is similar to existing U.S. Navy / Marine Corps aircraft. The tasks are allocated to different processors using a worst-fit allocation scheme. All the hard real-time tasks in the defence system are described by the following table.
 
-Name | Priority | Period (Deadline) | WCET | Utilisation | Allocated Processor 
+Name | Priority | WCET | Period (Deadline) | Utilisation | Allocated Processor 
 --- | --- | --- | --- |--- |--- 
 Weapon Release		|98 	|3  	|200  	|1.5		|0
 Rader Tracking Filter		|84  |2  	|25  		|8.0		|1
@@ -191,7 +191,7 @@ Consider the real-time stream processing task is released on processor 0, with a
 
 The system has 3 processors, and also hosts 4 hard real-time task:
 
-Name | Priority | Period | WCET | Deadline | Allocated Processor 
+Name | Priority | WCET | Period | Deadline | Allocated Processor 
 --- | --- | --- | --- |--- |--- 
 Task1 |11 |10  |20  |20  |0
 Task2 |9  |10  |40  |40  |1
