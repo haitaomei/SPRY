@@ -162,13 +162,13 @@ The hard real-time tasks is implemented using real-time threads, the implementat
         affinities.set(1);
         affinities.set(2);
         affinities.set(3);
-	/* Data allocation policy */
+	
         DataAllocationPolicy DAP = new CustomisedDataAllocationPolicy();
         DAP.addPairs(0, 2, 4, 8, 12, 16);
         DAP.addPairs(1, 3, 7, 10, 14);
         DAP.addPairs(2, 1, 5, 9, 13);
         DAP.addPairs(3, 0, 6, 11, 15);
-	/* SPRY BatchedStream */
+	
         BatchedStream<Integer> streaming = new BatchedStream<Integer>(
                 receiver, /* which receives radar raw inputs */
                 timeout,  /* the timeout value for micro-batching */
