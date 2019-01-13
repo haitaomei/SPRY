@@ -1,3 +1,9 @@
+# Thesis
+[Click here to download the PDF version of the thesis: Real-Time Stream Processing in Embedded Systems](Real-Time_Stream_Processing_In_Embedded_Systems_PhD_Thesis_Haitao_Mei.pdf)
+
+# Presentation Slides
+You can download the presentation slides (both the PowerPoint version and the PDF version) from [here](Slides/README.md)
+
 # Introduction
 The York Real-Time Stream Processing Framework (SPRY), is a real-time stream processing framework, which supports real-time parallel batched data processing. The overall goal of SPRY is to provide a set of simple pipelined APIs so that the data (including batched data and live streaming data) can be GUARANTEED to be processed within the deadline, while the hard real-time tasks in the system remain schedulable.
 
