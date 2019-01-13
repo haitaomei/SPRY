@@ -1,5 +1,7 @@
 # Thesis
-[Click here to download the PDF version of the thesis: Real-Time Stream Processing in Embedded Systems](Real-Time_Stream_Processing_In_Embedded_Systems_PhD_Thesis_Haitao_Mei.pdf)
+You may find it on the website of [White Rose eTheses Online](http://etheses.whiterose.ac.uk/19750/), or the link for the [PDF file](http://etheses.whiterose.ac.uk/19750/7/Thesis_Haitao_Mei.pdf) that is published on this official website.
+
+In case of the above website under maintenance, you may [Click here to download the PDF version of the thesis: Real-Time Stream Processing in Embedded Systems](Real-Time_Stream_Processing_In_Embedded_Systems_PhD_Thesis_Haitao_Mei.pdf)
 
 # Presentation Slides
 You can download the presentation slides (both the PowerPoint version and the PDF version) from [here](Slides/README.md)
