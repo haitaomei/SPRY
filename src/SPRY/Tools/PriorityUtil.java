@@ -1,6 +1,8 @@
 package SPRY.Tools;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 import SPRY.Tools.Conceptual.PeriodicTask;
 /** This utility assign priorities to a set of real-time tasks, 
@@ -15,13 +17,13 @@ public class PriorityUtil {
 		return priorities;
 	}
 
-	public static void deadlineMonotonicPriorityAssignment(ArrayList<PeriodicTask> taskset, int number) {
+	public static void deadlineMonotonicPriorityAssignment(List<PeriodicTask> taskSet, int number) {
 		ArrayList<Integer> priorities = generatePriorities(number);
 		/* deadline monotonic assignment */
-		taskset.sort((t1, t2) -> Double.compare(t1.deadline - t1.jitter, t2.deadline - t2.jitter));
+		taskSet.sort(Comparator.comparingDouble(t -> t.deadline - t.jitter));
 		priorities.sort((p1, p2) -> -Integer.compare(p1, p2));
-		for (int i = 0; i < taskset.size(); i++) {
-			taskset.get(i).priority = priorities.get(i);
+		for (int i = 0; i < taskSet.size(); i++) {
+			taskSet.get(i).priority = priorities.get(i);
 		}
 	}
 }

@@ -1,6 +1,7 @@
 package SPRY.Tools.Timing;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import SPRY.Tools.Conceptual.DServer;
 import SPRY.Tools.Conceptual.PeriodicTask;
@@ -8,11 +9,11 @@ import SPRY.Tools.Conceptual.SporadicTask;
 /** Response time analysis tools for a set of periodic (sporadic) real-time tasks */
 public class RTA {
 
-	public static boolean schedulabilityTest(ArrayList<PeriodicTask> hardRTTasks) {
+	public static boolean schedulabilityTest(List<PeriodicTask> hardRTTasks) {
 		return schedulabilityTest(hardRTTasks, false);
 	}
 	
-	public static boolean schedulabilityTest(ArrayList<PeriodicTask> hardRTTasks, boolean printDebugInfo) {
+	public static boolean schedulabilityTest(List<PeriodicTask> hardRTTasks, boolean printDebugInfo) {
 		if (hardRTTasks == null | hardRTTasks.size() == 0) return true;
 		hardRTTasks.sort((t1, t2) -> -Integer.compare(t1.priority, t2.priority));
 		boolean allMeetDeadlines = true;
@@ -49,7 +50,7 @@ public class RTA {
 		return allMeetDeadlines;
 	}
 
-	public static double busyWindow(PeriodicTask t, ArrayList<PeriodicTask> tasks, double Ri) {
+	public static double busyWindow(PeriodicTask t, List<PeriodicTask> tasks, double Ri) {
 		double interference = 0;
 		for (int i = 0; i < tasks.size(); i++) {
 			PeriodicTask hp = tasks.get(i);

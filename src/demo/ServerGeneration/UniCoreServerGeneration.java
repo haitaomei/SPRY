@@ -1,9 +1,9 @@
-package demo.HeuristicServerGeneration;
+package demo.ServerGeneration;
 
 import java.util.ArrayList;
 
 import SPRY.Tools.Conceptual.PeriodicTask;
-import SPRY.Tools.DeferrableServerTools.HeuristicDServerSearching;
+import SPRY.Tools.DeferrableServerTools.DServerGeneration;
 
 /**
  * Demonstrates the server searching algorithm is that:
@@ -11,7 +11,7 @@ import SPRY.Tools.DeferrableServerTools.HeuristicDServerSearching;
  * while we do not have interests with the deadline of it.
  */
 
-public class HeuristicServerSearchingDemo {
+public class UniCoreServerGeneration {
 
 	public static void main(String[] args) {
 		PeriodicTask t1 = new PeriodicTask(36, 5, 2, 3, "");
@@ -20,7 +20,7 @@ public class HeuristicServerSearchingDemo {
 		ArrayList<PeriodicTask> s = new ArrayList<>();
 		s.add(t1);
 		s.add(t2);
-		HeuristicDServerSearching ss = new HeuristicDServerSearching();
+		DServerGeneration ss = new DServerGeneration();
 		ss.serverSearching(s);
 		System.out.println(ss.getResult());
 	}

@@ -1,6 +1,7 @@
-package demo.StreamingTimeAnalysis;
+package demo.Scheduling;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import SPRY.Tools.StreamScheduling;
 import SPRY.Tools.Conceptual.PeriodicTask;
@@ -11,34 +12,34 @@ import SPRY.Tools.Conceptual.PeriodicTask;
  * of the stream processing task's execution is analysed.
  * In addition, the latency is also analysed.
  */
-public class CaseStudy {
+public class ThesisCaseStudy {
 
 	public static void main(String[] args) {
-		ArrayList<ArrayList<PeriodicTask>> tsOnAllProcessors = new ArrayList<>();
+		List<List<PeriodicTask>> tsOnAllProcessors = new ArrayList<>();
 
 		/* Processor 0 */
-		ArrayList<PeriodicTask> p0 = new ArrayList<>();
+		List<PeriodicTask> p0 = new ArrayList<>();
 		p0.add(new PeriodicTask(98, 200, 3, 200, "Weapon Release"));
 		p0.add(new PeriodicTask(64, 50, 3, 50, "Weapon Aiming"));
 		p0.add(new PeriodicTask(56, 59, 8, 59, "Nav Update"));
 		tsOnAllProcessors.add(p0);
 
 		/* Processor 1 */
-		ArrayList<PeriodicTask> p1 = new ArrayList<>();
+		List<PeriodicTask> p1 = new ArrayList<>();
 		p1.add(new PeriodicTask(84, 25, 2, 25, "Rader Tracking Filter"));
 		p1.add(new PeriodicTask(40, 80, 9, 80, "Display Graphic"));
 		p1.add(new PeriodicTask(24, 200, 3, 200, "Nav Steering Cmds"));
 		tsOnAllProcessors.add(p1);
 
 		/* Processor 2 */
-		ArrayList<PeriodicTask> p2 = new ArrayList<>();
+		List<PeriodicTask> p2 = new ArrayList<>();
 		p2.add(new PeriodicTask(72, 25, 5, 25, "RWR Contact Mgmt"));
 		p2.add(new PeriodicTask(20, 200, 1, 200, "Display Stores Update"));
 		p2.add(new PeriodicTask(12, 200, 3, 200, "Display Stat Update"));
 		tsOnAllProcessors.add(p2);
 
 		/* Processor 3 */
-		ArrayList<PeriodicTask> p3 = new ArrayList<>();
+		List<PeriodicTask> p3 = new ArrayList<>();
 		p3.add(new PeriodicTask(68, 40, 1, 40, "Data Bus Poll Device"));
 		p3.add(new PeriodicTask(60, 50, 5, 50, "Radar Target Update"));
 		p3.add(new PeriodicTask(36, 80, 2, 80, "Display Hook Update"));
